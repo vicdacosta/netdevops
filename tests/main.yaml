@@ -1,0 +1,4 @@
+- import_playbook: tests/site1/main.yaml
+- import_playbook: tests/site2/main.yaml
+- import_playbook: tests/core/main.yaml
+- import_playbook: tests/remote/main.yaml
