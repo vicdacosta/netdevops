@@ -1,0 +1,4 @@
+- name: "Run tests"
+  hosts: site2
+  roles:
+    - role: site2

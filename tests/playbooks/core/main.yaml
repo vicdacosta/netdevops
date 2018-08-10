@@ -1,0 +1,4 @@
+- name: "Run tests"
+  hosts: core
+  roles:
+    - role: core
