@@ -1,3 +1,4 @@
+```
 inventory
 ├── group_vars
 │   ├── core
@@ -75,5 +76,5 @@ tests
         │   └── main.yaml
         └── vars
             └── main.yaml
-
+```
 40 directories, 35 files
