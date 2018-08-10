@@ -1,4 +1,4 @@
 - name: "Run tests"
   hosts: remote
   roles:
-    - role: remote
+    - role: ospfv2

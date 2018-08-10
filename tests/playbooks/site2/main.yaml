@@ -1,4 +1,6 @@
 - name: "Run tests"
   hosts: site2
+  gather_facts: no
+  connection: network_cli
   roles:
-    - role: site2
+    - role: ospfv2

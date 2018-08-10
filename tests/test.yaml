@@ -1,0 +1,9 @@
+- hosts: all
+  connection: local
+  gather_facts: no
+  roles:
+    - ansible
+    - ansible-lint
+    - ansible-review
+
+- import_playbook: playbooks/main.yaml

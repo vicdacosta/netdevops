@@ -1,0 +1,12 @@
+---
+- name: "Install ansible-lint"
+  pip:
+    name: ansible-lint
+    extra_args: --user
+    state: forcereinstall
+    executable: /usr/bin/pip
+
+- name: Run ansible-lint on yaml files
+  shell: >
+    find * -name "*.yml" -or -name "*.yaml" |
+        xargs --no-run-if-empty ansible-lint -p --nocolor

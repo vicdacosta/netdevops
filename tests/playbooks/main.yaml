@@ -2,3 +2,4 @@
 - import_playbook: remote/main.yaml
 - import_playbook: site1/main.yaml
 - import_playbook: site2/main.yaml
+- import_playbook: core1/main.yaml

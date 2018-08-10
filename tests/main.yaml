@@ -1,1 +1,1 @@
-- import_playbook: playbooks/main.yaml
+- import_playbook: test.yaml
