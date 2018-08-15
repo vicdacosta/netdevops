@@ -1,4 +1,4 @@
 - name: "Run tests"
   hosts: remote
   roles:
-    - role: ospfv2
+    - role: ios_ospfv2
