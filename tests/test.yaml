@@ -1,9 +1,9 @@
+#!/usr/bin/env ansible-playbook
 - hosts: all
   connection: local
   gather_facts: no
   roles:
-    - ansible
-    - ansible-lint
-    - ansible-review
+    - do_prepare
+    - do_test
 
-- import_playbook: playbooks/main.yaml
+- import_playbook: pipelines/main.yaml

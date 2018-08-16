@@ -1,0 +1,17 @@
+- name: "pip install docker"
+  pip:
+    name: docker
+    extra_args: --user
+    state: forcereinstall
+    executable: /usr/bin/pip
+
+- name: "install docker"
+  yum:
+    name: docker
+    state: latest
+
+- name: "ensure docker service"
+  service:
+    name: "docker"
+    enabled: true
+    state: running

@@ -5,8 +5,3 @@
     extra_args: --user
     state: forcereinstall
     executable: /usr/bin/pip
-
-- name: Run ansible-review on yaml files
-  shell: >
-    find * -name "*.yml" -or -name "*.yaml" |
-        xargs --no-run-if-empty ansible-review

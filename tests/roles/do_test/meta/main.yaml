@@ -1,0 +1,14 @@
+---
+dependencies:
+  - do_ansible_review
+  - do_ansible_lint
+
+galaxy_info:
+  role_name: pipeline_test
+  author: "Victor da Costa (@victorock)"
+  description: "Pipeline: Test"
+  company: "Ansible"
+  license: GPLv3
+  min_ansible_version: 2.6
+  platforms: []
+  galaxy_tags: []
