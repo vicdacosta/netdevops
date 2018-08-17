@@ -1,4 +1,4 @@
 - name: "install ansible"
-  package:
+  yum:
     name: ansible
     state: present
