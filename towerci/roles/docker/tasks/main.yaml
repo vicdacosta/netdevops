@@ -4,8 +4,13 @@
       - docker
       - device-mapper-libs
       - device-mapper-event-libs
-      - python-docker
     state: "present"
+
+- name: pip install Docker
+  pip:
+    name: docker
+    extra_args: --user
+    state: present
 
 - name: Ensure Docker is started and enabled
   service:
