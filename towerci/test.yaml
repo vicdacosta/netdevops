@@ -3,19 +3,15 @@
   hosts: localhost
   connection: local
   gather_facts: no
-  become: yes
+  become: no
 
   tasks:
-    - name: "do_prepare"
-      include_role:
-        name: do_prepare
+#    - name: "do_prepare"
+#      include_role:
+#        name: do_prepare
 
     - name: "do_baseline"
       include_role:
         name: do_baseline
 
-    - name: "do_pipeline"
-      include_role:
-        name: do_pipeline
-      vars:
-        do_pipeline_data_path: "{{ playbook_dir }}/../"
+- import_playbook: "pipelines/{{ pipeline | default('all') }}/main.yaml"
