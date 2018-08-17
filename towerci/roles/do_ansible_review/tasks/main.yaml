@@ -2,5 +2,6 @@
   shell: >
     find * -name "*.yml" -or -name "*.yaml" |
         xargs --no-run-if-empty ansible-review
+  changed_when: true
   args:
     chdir: "{{ do_ansible_review_folder }}"

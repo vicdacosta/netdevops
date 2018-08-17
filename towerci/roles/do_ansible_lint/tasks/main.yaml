@@ -3,5 +3,6 @@
   shell: >
     find * -name "*.yml" -or -name "*.yaml" |
         xargs --no-run-if-empty ansible-lint -p --nocolor
+  changed_when: true
   args:
     chdir: "{{ do_ansible_lint_folder }}"
