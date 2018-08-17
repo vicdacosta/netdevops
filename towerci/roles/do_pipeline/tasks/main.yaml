@@ -7,8 +7,8 @@
     privileged: "{{ do_pipeline_privileged }}"
     init: "{{ do_pipeline_init }}"
     command:
-      - ansible-playbook -v -c local /data/pipelines/{{ do_pipeline_name }}/main.yaml
+      - "ansible-playbook -v -c local /data/pipelines/{{ do_pipeline_name }}/main.yaml"
     volumes:
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
-      - {{ do_pipeline_data_path }}:/data:ro
-      - {{ do_pipeline_data_path }}/test/roles:/etc/ansible/roles:ro
+      - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
+      - "{{ do_pipeline_data_path }}:/data:ro"
+      - "{{ do_pipeline_data_path }}/test/roles:/etc/ansible/roles:ro"
