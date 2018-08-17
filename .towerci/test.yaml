@@ -1,0 +1,21 @@
+#!/usr/bin/env ansible-playbook
+- name: "Trigger the tests"
+  hosts: localhost
+  connection: local
+  gather_facts: True
+  become: true
+
+  tasks:
+    - name: "do_prepare"
+      include_role:
+        name: do_prepare
+
+    - name: "do_baseline"
+      include_role:
+        name: do_baseline
+
+    - name: "do_pipeline"
+      include_role:
+        name: do_pipeline
+      vars:
+        do_pipeline_data_path: "{{ playbook_dir }}/../"

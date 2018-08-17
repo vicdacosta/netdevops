@@ -1,7 +1,0 @@
----
-- name: "Install ansible-review"
-  pip:
-    name: ansible-review
-    extra_args: --user
-    state: forcereinstall
-    executable: /usr/bin/pip

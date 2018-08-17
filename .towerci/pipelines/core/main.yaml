@@ -1,0 +1,7 @@
+- name: "Run tests"
+  hosts: core
+  connection: network_cli
+  gather_facts: no
+  tasks:
+    - include_role:
+        name: ios_ospfv2

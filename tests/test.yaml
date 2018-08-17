@@ -1,9 +1,0 @@
-#!/usr/bin/env ansible-playbook
-- hosts: all
-  connection: local
-  gather_facts: no
-  roles:
-    - do_prepare
-    - do_test
-
-- import_playbook: pipelines/main.yaml

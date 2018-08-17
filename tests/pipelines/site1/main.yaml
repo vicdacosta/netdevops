@@ -1,6 +1,0 @@
-- name: "Run tests"
-  hosts: site1
-  gather_facts: no
-  connection: network_cli
-  roles:
-    - role: ios_ospfv2

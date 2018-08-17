@@ -1,5 +1,0 @@
----
-- name: Run ansible-lint on yaml files
-  shell: >
-    find * -name "*.yml" -or -name "*.yaml" |
-        xargs --no-run-if-empty ansible-lint -p --nocolor

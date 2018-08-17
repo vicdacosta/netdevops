@@ -1,0 +1,14 @@
+- name: "Run tests"
+  hosts: core2
+  gather_facts: no
+  connection: network_cli
+
+  tasks:
+    - name: "show ip ospf 110 rib"
+      ios_command:
+        commands:
+          - show ip ospf 110 rib
+        wait_for:
+          - result[0] contains 10.0.0.0
+          - result[0] contains 192.168.0.0
+          - result[0] contains 172.16.0.0

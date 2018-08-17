@@ -1,0 +1,6 @@
+do_pipeline_name: "all"
+do_pipeline_env: "{{ ansible_env | default(omit, true) }}"
+do_pipeline_image: "samdoran/rhel7-ansible"
+do_pipeline_data_path: "{{ playbook_dir }}/../"
+do_pipeline_init: "/usr/lib/systemd/systemd"
+do_pipeline_privileged: True

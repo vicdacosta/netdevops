@@ -1,0 +1,6 @@
+- name: Run ansible-review on yaml files
+  shell: >
+    find * -name "*.yml" -or -name "*.yaml" |
+        xargs --no-run-if-empty ansible-review
+  args:
+    chdir: "{{ do_ansible_review_folder }}"
