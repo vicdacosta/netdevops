@@ -6,10 +6,6 @@
   become: no
 
   tasks:
-#    - name: "do_prepare"
-#      include_role:
-#        name: do_prepare
-
     - name: "do_baseline"
       include_role:
         name: do_baseline

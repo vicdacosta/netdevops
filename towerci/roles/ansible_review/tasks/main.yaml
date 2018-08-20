@@ -1,5 +1,0 @@
----
-- name: "Install ansible-review"
-  pip:
-    name: ansible-review
-    state: present
