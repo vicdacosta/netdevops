@@ -1,6 +1,5 @@
 ---
-dependencies:
-  - ansible_lint
+dependencies: []
 
 galaxy_info:
   role_name: ansible_lint

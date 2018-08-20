@@ -1,6 +1,5 @@
 ---
-dependencies:
-  - ansible_review
+dependencies: []
 
 galaxy_info:
   role_name: ansible_review
