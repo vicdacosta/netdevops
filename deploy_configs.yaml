@@ -1,0 +1,17 @@
+---
+- name: PLAY TO ENSURE DECLARED CONFIGURATION EXISTS ON DEVICES
+  hosts: all
+  connection: local
+  gather_facts: no
+
+  tasks:
+
+    - name: ENSURE THAT REMOTE ROUTERS HAVE NECESSARY CONFIGURATIONS
+      ios_config:
+        src: render_remote.j2
+      when: "'remote' in inventory_hostname"
+
+    - name: ENSURE THAT CORE ROUTERS HAVE NECESSARY CONFIGURATIONS
+      ios_config:
+        src: render_core.j2
+      when: "'core' in inventory_hostname"
