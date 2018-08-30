@@ -3,6 +3,10 @@
   connection: network_cli
   gather_facts: no
   tasks:
+    - name: "do_policy"
+      include_role:
+        name: do_policy
+
     - name: "ios_ospfv2"
       include_role:
         name: ios_ospfv2
