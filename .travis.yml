@@ -21,7 +21,7 @@ install:
   # Check tower-cli version
   - tower-cli --version
 
-before_script: cd towerci
+before_script: cd tests
 script:
   - |
     ansible-playbook -i inventory main.yaml \
