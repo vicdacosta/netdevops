@@ -1,0 +1,7 @@
+---
+- name: "Deploy Configuration"
+  hosts: all
+  connection: local
+  gather_facts: no
+  roles:
+    - deploy

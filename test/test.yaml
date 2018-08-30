@@ -1,6 +1,6 @@
 #!/usr/bin/env ansible-playbook
 - name: "Trigger the tests"
-  hosts: localhost
+  hosts: all
   connection: local
   gather_facts: no
   become: no
@@ -10,4 +10,6 @@
       include_role:
         name: do_baseline
 
-- import_playbook: "pipelines/{{ pipeline | default('all') }}/main.yaml"
+    - name: "do_policy"
+      include_role:
+        name: do_policy

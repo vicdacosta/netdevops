@@ -1,3 +1,10 @@
 all:
   hosts:
     localhost:
+  children:
+    core:
+    dev:
+    prod:
+    remote:
+    site1:
+    site2:

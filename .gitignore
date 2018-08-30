@@ -1,7 +1,0 @@
-/inventory/test.inv
-*.cfg
-*.retry
-.gitignore
-*.inv
-/test.yaml
-files/*.pem
