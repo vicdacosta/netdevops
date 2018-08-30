@@ -12,14 +12,8 @@ addons:
     - python-pip
 
 install:
-  # Install ansible
-  - pip install ansible
-  # Install tower-cli
-  - pip install ansible-tower-cli
-  # Check ansible version
-  - ansible --version
-  # Check tower-cli version
-  - tower-cli --version
+  # Install requirements
+  - pip install -r requirements.txt
 
 before_script: cd tests
 script:
