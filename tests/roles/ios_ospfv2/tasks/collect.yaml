@@ -1,6 +1,12 @@
-  - name: "show ip ospf 110 rib"
+  - name: "show ip ospf {{ process_id }} rib"
+    vars:
+      ansible_network_os: ios
     ios_command:
       commands:
-        - show ip ospf 110 rib
-    register: show_ip_ospf_110_rib
-    when: ospfv2.110 is defined
+        - show ip ospf {{ process_id }} rib
+    register: show_ip_ospf_process_rib
+
+  - name: "debug show_ip_ospf_process_rib (verbosity 3)"
+    debug:
+      var: show_ip_ospf_process_rib
+      verbosity: 3

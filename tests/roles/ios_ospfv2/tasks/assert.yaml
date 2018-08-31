@@ -1,7 +1,11 @@
-- name: "assert show_ip_ospf_110_rib"
+- name: "assert show_ip_ospf_process_rib"
   assert:
     that:
-      -  show_ip_ospf_110_rib.stdout in item.network
-      -  show_ip_ospf_110_rib.stdout in item.type
-  loop: "{{ ospfv2.110.areas }}"
-  when: ospfv2.110.areas is defined
+      -  network.wc in show_ip_ospf_process_rib.stdout
+      -  network.net in show_ip_ospf_process_rib.stdout
+  loop: "{{ networks }}"
+  loop_control:
+    loop_var: network
+  when:
+    - networks is defined
+    - networks is iterable
