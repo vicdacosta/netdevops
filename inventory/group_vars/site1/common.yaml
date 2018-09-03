@@ -3,8 +3,10 @@ snmp:
   ro:
     - Site1-Snmpro
     - Ansible123
+    - Ansible4Network
   rw:
     - site1-AnsibleFest2018
+    - Ansible-4Network
   contact:
     - site1-netops
 
